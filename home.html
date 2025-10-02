@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      overflow: hidden;
+    }
+
+    /* floating hearts background */
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .hearts span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.6);
+      animation: animate 10s linear infinite;
+      bottom: -150px;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 
+                         68% 57%, 79% 91%, 50% 70%, 
+                         21% 91%, 32% 57%, 2% 35%, 
+                         39% 35%);
+    }
+    .hearts span:nth-child(1){ left: 10%; animation-delay: 0s; }
+    .hearts span:nth-child(2){ left: 20%; animation-delay: 2s; }
+    .hearts span:nth-child(3){ left: 70%; animation-delay: 4s; }
+    .hearts span:nth-child(4){ left: 50%; animation-delay: 6s; }
+    .hearts span:nth-child(5){ left: 85%; animation-delay: 8s; }
+
+    @keyframes animate {
+      0%   { transform: translateY(0) scale(0); opacity: 1; }
+      100% { transform: translateY(-800px) scale(2); opacity: 0; }
+    }
+
+    /* sorry text */
+    h1 {
+      font-size: 60px;
+      color: white;
+      text-shadow: 0 0 20px rgba(255,255,255,0.7),
+                   0 0 40px rgba(255,0,90,0.6);
+      margin: 0;
+      z-index: 1;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff6b81; }
+      to   { text-shadow: 0 0 20px #fff, 0 0 40px #ff1e56; }
+    }
+
+    /* message */
+    p {
+      font-size: 20px;
+      color: #000;
+      max-width: 600px;
+      text-align: center;
+      margin-top: 20px;
+      z-index: 1;
+    }
+
+    /* heart pulse */
+    .heart {
+      font-size: 80px;
+      margin-top: 15px;
+      animation: pulse 1.2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); color: #fff; }
+      50% { transform: scale(1.3); color: #ff1e56; }
+      100% { transform: scale(1); color: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <h1>I'm Sorry prashant💔</h1>
+  <p>
+    sorry na yrr plz maf kr do plz mujhe maf kr do tum bat ni kroge to me sachi wese hi mr jaungi.  
+    meri glti h yrr mujhe pta ni kya kya ho jata h meko bs acha ni lga ki msg aya tumhe uska main kabhi tumhe khona nahi chahti.  
+    or tum ese ignore mt kro please yrr please hath jodti mujhe chub rha bhut please sorry sorry. ❤
+  </p>
+  <div class="heart">❤</div>
+</body>
+</html>
